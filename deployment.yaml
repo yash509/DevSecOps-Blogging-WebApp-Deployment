@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pe-wa-deployment
+  name: blogging-website-deployment
 spec:
   replicas: 6  # Number of desired replicas
   selector:
     matchLabels:
-      app: pe-wa
+      app: blogging-website
   template:
     metadata:
       labels:
-        app: pe-wa
+        app: blogging-website
     spec:
       containers:
-      - name: pe-wa
-        image: yash5090/pe-wa:latest
+      - name: blogging-website
+        image: yash5090/blogging-website:latest
         ports:
         - containerPort: 5000
